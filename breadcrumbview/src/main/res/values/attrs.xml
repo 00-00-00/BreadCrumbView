@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="BreadCrumbView">
+    <attr name="currentStep" format="integer"/>
+    <attr name="totalSteps" format="integer"/>
+    <attr name="radius" format="float"/>
+    <attr name="borderWidth" format="float"/>
+    <attr name="textColorNormal" format="reference"/>
+    <attr name="textColorActivated" format="reference"/>
+  </declare-styleable>
+</resources>
