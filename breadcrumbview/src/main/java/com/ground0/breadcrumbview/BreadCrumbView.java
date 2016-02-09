@@ -43,7 +43,7 @@ public class BreadCrumbView extends View {
   int mCurrentStep = 1;
   int mTotalSteps = 2;
   float mRadius = 80;
-  float mBorderWidth = 2;
+  float mBorderWidth = 0;
 
   public BreadCrumbView(Context context) {
     super(context);
@@ -159,7 +159,7 @@ public class BreadCrumbView extends View {
       for (int i = from; i < to; i++) {
         cx = mRadius + i * (mParentWidth) / (mTotalSteps - 1);
         canvas.drawCircle(cx, cy, mRadius, shapePaint);
-        canvas.drawCircle(cx, cy, mRadius - mBorderWidth / 2, borderPaint);
+        canvas.drawCircle(cx, cy, mRadius - mBorderWidth, borderPaint);
         canvas.drawText("" + (i + 1), cx, cy + textPaint.getTextSize() / 3, textPaint);
       }
     }
