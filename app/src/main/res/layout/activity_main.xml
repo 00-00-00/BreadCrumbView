@@ -12,11 +12,11 @@
     tools:context="com.example.zer0.customview.MainActivity"
     >
   <com.ground0.breadcrumbview.BreadCrumbView
-      app:radius="60"
-      app:totalSteps="3"
-      app:currentStep="2"
-      app:textColorNormal="@android:color/white"
-      app:textColorActivated="@android:color/white"
+      app:bcRadius="60"
+      app:bcTotalSteps="3"
+      app:bcCurrentStep="2"
+      app:bcTextColorNormal="@android:color/white"
+      app:bcTextColorActivated="@android:color/white"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       />

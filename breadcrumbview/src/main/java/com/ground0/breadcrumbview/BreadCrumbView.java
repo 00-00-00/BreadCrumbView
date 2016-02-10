@@ -7,7 +7,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -66,15 +65,15 @@ public class BreadCrumbView extends View {
     TypedArray typedArray =
         context.getTheme().obtainStyledAttributes(attrs, R.styleable.BreadCrumbView, 0, 0);
     try {
-      mCurrentStep = typedArray.getInt(R.styleable.BreadCrumbView_currentStep, 0);
-      mTotalSteps = typedArray.getInt(R.styleable.BreadCrumbView_totalSteps, 2);
-      mRadius = typedArray.getFloat(R.styleable.BreadCrumbView_radius, 80);
-      mBorderWidth = typedArray.getFloat(R.styleable.BreadCrumbView_borderWidth, 0);
+      mCurrentStep = typedArray.getInt(R.styleable.BreadCrumbView_bcCurrentStep, 0);
+      mTotalSteps = typedArray.getInt(R.styleable.BreadCrumbView_bcTotalSteps, 2);
+      mRadius = typedArray.getFloat(R.styleable.BreadCrumbView_bcRadius, 80);
+      mBorderWidth = typedArray.getFloat(R.styleable.BreadCrumbView_bcBorderWidth, 0);
       textColorActivated = ContextCompat.getColor(context,
-          typedArray.getResourceId(R.styleable.BreadCrumbView_textColorActivated,
+          typedArray.getResourceId(R.styleable.BreadCrumbView_bcTextColorActivated,
               android.R.color.primary_text_light));
       textColorNormal = ContextCompat.getColor(context,
-          typedArray.getResourceId(R.styleable.BreadCrumbView_textColorNormal,
+          typedArray.getResourceId(R.styleable.BreadCrumbView_bcTextColorNormal,
               android.R.color.primary_text_light));
     } finally {
       typedArray.recycle();
